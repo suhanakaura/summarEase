@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" class="bg-gray-50">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SummarEase</title>
+    <style>
+      /* Prevent white flash during load */
+      html {
+        background-color: #f9fafb;
+      }
+      html.dark {
+        background-color: #111827;
+      }
+      #root {
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+      }
+      #root.loaded {
+        opacity: 1;
+      }
+    </style>
+    <script>
+      // Immediately set the theme before the app loads
+      (function() {
+        try {
+          const darkMode = localStorage.getItem('darkMode');
+          if (darkMode === 'true') {
+            document.documentElement.classList.add('dark');
+          }
+          // Add loaded class once DOM is ready
+          document.addEventListener('DOMContentLoaded', function() {
+            requestAnimationFrame(function() {
+              document.getElementById('root').classList.add('loaded');
+            });
+          });
+        } catch (e) {
+          console.error('Theme initialization error:', e);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "short_name": "SummarEase",
+  "name": "SummarEase - Text Summarization Tool",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+} 
