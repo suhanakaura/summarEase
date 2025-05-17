@@ -312,4 +312,10 @@ pyrightconfig.json
 
 node_modules/
 
+backend/cache/
+*.safetensors
+*.bin
+*.incomplete
+*.pt
+
 # End of https://www.toptal.com/developers/gitignore/api/node,python
