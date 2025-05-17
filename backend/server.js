@@ -94,7 +94,9 @@ const processLanguage = async (text, targetLang = 'en') => {
 };
 
 // MongoDB connection with retry mechanism
+// const MONGODB_URI = "mongodb://localhost:27017/summarease";
 const MONGODB_URI = "mongodb+srv://suhanakaura01:suhana@cluster0.8kcfz2z.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
 
 mongoose.set('strictQuery', false);
 
